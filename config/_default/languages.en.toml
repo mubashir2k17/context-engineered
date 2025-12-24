@@ -1,0 +1,28 @@
+disabled = false
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "Context Engineered"
+
+[params]
+  displayName = "EN"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "January 2, 2006"
+  description = "Personal branding and technical blog focused on context engineering, AI, and software development"
+  copyright = "© 2024-2025 Context Engineered. All rights reserved."
+
+[params.author]
+  name = "Context Engineered"
+  # email = "your-email@example.com"
+  # image = "img/author.jpg"
+  # imageQuality = 96
+  headline = "Mastering the Art of Context Engineering"
+  bio = "Where prompts become magic. Exploring context engineering, AI interactions, and the future of human-AI collaboration."
+  # Uncomment and customize the links you want to display
+  # links = [
+  #   { github = "https://github.com/yourusername" },
+  #   { linkedin = "https://linkedin.com/in/yourusername" },
+  #   { x-twitter = "https://twitter.com/yourusername" },
+  #   { email = "mailto:your-email@example.com" },
+  # ]
