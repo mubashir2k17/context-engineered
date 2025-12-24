@@ -1,42 +1,138 @@
-# 🎯 Context-Engineered: Where Prompts Become Magic! ✨
+# Context-Engineered
 
-Welcome to the most exciting corner of the AI universe! 🚀 This is your gateway to mastering **context engineering** – the art and science of crafting prompts that make AI models do exactly what you want (and maybe a little more!).
+Welcome to **Context-Engineered** - a personal branding and technical blog exploring context engineering, AI, and intelligent systems.
 
-## 🌟 What's This All About?
+## 🚀 Built With
 
-Context engineering is like being a wizard, but instead of a wand, you wield words! It's about understanding how to communicate with AI models in ways that unlock their full potential. Think of it as the difference between asking someone for directions and having a GPS that knows exactly where you want to go AND the best scenic route to get there.
+- **[Hugo](https://gohugo.io/)** - Fast and flexible static site generator
+- **[Blowfish Theme](https://blowfish.page/)** - Beautiful and feature-rich Hugo theme
+- **GitHub Pages** - Free hosting with custom domain support
 
-## 🎨 Why Should You Care?
+## 📁 Project Structure
 
-- **Make AI Your Creative Partner**: Learn to craft prompts that inspire brilliant responses
-- **Save Time & Energy**: Stop wrestling with AI – start collaborating with it!
-- **Unlock Hidden Potential**: Discover techniques that professional prompt engineers use
-- **Have Fun While Learning**: Because who said technical skills can't be enjoyable?
+```
+.
+├── config/              # Hugo configuration files
+│   └── _default/
+│       ├── hugo.toml    # Main site configuration
+│       ├── params.toml  # Theme parameters
+│       ├── languages.en.toml  # Language settings
+│       └── menus.en.toml      # Navigation menus
+├── content/             # Site content (markdown files)
+│   ├── _index.md        # Homepage content
+│   └── posts/           # Blog posts
+├── themes/              # Hugo themes
+│   └── blowfish/        # Blowfish theme (git submodule)
+├── static/              # Static files (copied to site root)
+│   └── CNAME            # Custom domain configuration
+├── .github/
+│   └── workflows/
+│       └── hugo.yml     # GitHub Actions deployment workflow
+└── public/              # Generated site (created by Hugo build)
+```
 
-## 📚 Dive Into The Full Story!
+## 🛠️ Local Development
 
-👉 **[Read the Complete Context Engineering Article](./context-engineering-article.md)** 👈
+### Prerequisites
 
-Seriously, go check it out! It's packed with insights, examples, and practical tips that'll transform how you interact with AI. Whether you're a curious beginner or a seasoned pro, there's something in there for you. Trust us – your future self will thank you! 🙌
+- Hugo Extended v0.141.0 or later
+- Git
 
-## 🔥 What Makes This Repo Special?
+### Setup
 
-This isn't just another tech tutorial. This is a living, breathing guide to one of the most valuable skills in the AI age. We're breaking down complex concepts into digestible, actionable insights that you can start using TODAY.
+1. Clone the repository:
+```bash
+git clone https://github.com/YOUR-USERNAME/YOUR-REPO.git
+cd YOUR-REPO
+```
 
-### Here's what you'll discover:
-- Real-world examples that actually make sense
-- Techniques that work across different AI models
-- Best practices learned from trial, error, and triumph
-- A community-driven approach to learning
+2. Initialize and update the theme submodule:
+```bash
+git submodule update --init --recursive
+```
 
-## 🚀 Ready to Level Up?
+3. Start the Hugo development server:
+```bash
+hugo server -D
+```
 
-Context engineering is the secret sauce behind every impressive AI interaction you've ever seen. It's the difference between "meh" responses and "WOW, how did you get it to do that?!" moments.
+4. Open your browser to `http://localhost:1313`
 
-So what are you waiting for? Explore the repo, read the article, experiment with the techniques, and join us in pushing the boundaries of what's possible with AI!
+## 📝 Creating Content
+
+### New Blog Post
+
+Create a new blog post using Hugo's CLI:
+
+```bash
+hugo new content/posts/my-new-post.md
+```
+
+Or manually create a file in `content/posts/` with this frontmatter:
+
+```markdown
+---
+title: "My New Post Title"
+date: 2025-12-24
+draft: false
+description: "A brief description of your post"
+tags: ["tag1", "tag2"]
+categories: ["Technical"]
+---
+
+Your content here...
+```
+
+## 🚀 Deployment
+
+This site is automatically deployed to GitHub Pages using GitHub Actions whenever you push to the `main` branch.
+
+### GitHub Pages Setup
+
+1. Go to your repository Settings → Pages
+2. Under "Build and deployment", select:
+   - **Source**: GitHub Actions
+3. The site will be available at `https://context-engineered.com` (or your custom domain)
+
+### Custom Domain
+
+The custom domain is configured in the `static/CNAME` file. It's automatically included in the built site.
+
+## 🎨 Customization
+
+### Site Configuration
+
+Edit `config/_default/hugo.toml` to change:
+- Site title
+- Base URL
+- Language settings
+- Taxonomies
+
+### Theme Parameters
+
+Edit `config/_default/params.toml` to customize:
+- Color scheme
+- Layout options
+- Features (search, code copy, etc.)
+- Social sharing
+
+### Author Information
+
+Edit `config/_default/languages.en.toml` to update:
+- Author name and bio
+- Social media links
+- Site description
+
+## 📚 Resources
+
+- [Hugo Documentation](https://gohugo.io/documentation/)
+- [Blowfish Theme Documentation](https://blowfish.page/docs/)
+- [Blowfish Theme Examples](https://blowfish.page/examples/)
+
+## 📄 License
+
+Content is copyrighted. Theme is licensed under the MIT License.
 
 ---
 
-*Built with curiosity, powered by experimentation, and shared with love* ❤️
-
-**Happy Context Engineering!** 🎉
+**Happy blogging!** 🎉

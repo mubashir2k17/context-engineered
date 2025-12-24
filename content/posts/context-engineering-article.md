@@ -1,4 +1,11 @@
-# Context Engineering: Shaping Intelligent and Adaptive Systems
+---
+title: "Context Engineering: Shaping Intelligent and Adaptive Systems"
+date: 2025-12-24
+draft: false
+description: "A comprehensive guide to context engineering - the systematic approach to designing intelligent systems that understand, adapt to, and respond based on contextual information"
+tags: ["context-engineering", "ai", "adaptive-systems", "intelligent-systems"]
+categories: ["Technical"]
+---
 
 ## Introduction
 
