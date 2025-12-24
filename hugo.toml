@@ -1,0 +1,133 @@
+# -- Site configuration --
+# Blowfish theme docs: https://blowfish.page/docs/
+
+theme = "blowfish"
+baseURL = "https://context-engineered.com/"
+languageCode = "en"
+title = "Context Engineered"
+
+enableRobotsTXT = true
+summaryLength = 30
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"] # JSON required for site search
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  series = "series"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.parser]
+      wrapStandAloneImageWithinParagraph = false
+      [markup.goldmark.parser.attribute]
+        block = true
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\\[', '\\]'], ['$$', '$$']]
+          inline = [['\\(', '\\)']]
+  [markup.highlight]
+    noClasses = false
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+
+# -- Theme parameters --
+[params]
+  colorScheme = "blowfish"
+  defaultAppearance = "dark" # light | dark
+  autoSwitchAppearance = true
+
+  enableSearch = true
+  enableCodeCopy = true
+  enableStructuredBreadcrumbs = true
+
+  mainSections = ["posts"]
+
+  [params.header]
+    layout = "fixed"
+
+  [params.footer]
+    showMenu = true
+    showCopyright = true
+    showThemeAttribution = true
+    showAppearanceSwitcher = true
+    showScrollToTop = true
+
+  [params.homepage]
+    layout = "profile" # page | profile | hero | card | background | custom
+    showRecent = true
+    showRecentItems = 6
+    showMoreLink = true
+    showMoreLinkDest = "posts"
+    cardView = true
+
+  [params.article]
+    showAuthor = true
+    showHero = true
+    heroStyle = "background"
+    showBreadcrumbs = true
+    showReadingTime = true
+    showTableOfContents = true
+    showRelatedContent = true
+    relatedContentLimit = 6
+    showTaxonomies = true
+    enableCodeCopy = true
+
+  [params.list]
+    showHero = true
+    heroStyle = "background"
+    showBreadcrumbs = false
+    showSummary = true
+    showCards = true
+    cardView = true
+
+  [params.term]
+    groupByYear = false
+    cardView = true
+
+  [params.author]
+    name = "Your Name"
+    headline = "Personal branding + technical writing"
+    bio = "I build things and write about what I learn."
+    # image = "img/author.jpg"
+    links = [
+      # { linkedin = "https://www.linkedin.com/in/YOUR_HANDLE/" },
+      # { github = "https://github.com/YOUR_HANDLE" },
+    ]
+
+# -- Menus --
+[[menu.main]]
+  name = "Blog"
+  pageRef = "posts"
+  weight = 10
+
+[[menu.main]]
+  name = "About"
+  pageRef = "about"
+  weight = 20
+
+[[menu.main]]
+  name = "Tags"
+  pageRef = "tags"
+  weight = 30
+
+[[menu.footer]]
+  name = "Blog"
+  pageRef = "posts"
+  weight = 10
+
+[[menu.footer]]
+  name = "About"
+  pageRef = "about"
+  weight = 20
+
+[[menu.footer]]
+  name = "Tags"
+  pageRef = "tags"
+  weight = 30
