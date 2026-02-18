@@ -1,0 +1,9 @@
+{
+  "name": "Mubashir Ali",
+  "image": "img/mubashir-ali.jpg",
+  "bio": "Senior Software Engineer and Technical Lead focused on backend architecture, scalable systems, and cross-platform product delivery.",
+  "social": [
+    { "linkedin": "https://www.linkedin.com/in/mubashir-ali-software" },
+    { "email": "mailto:mubashir2k17@gmail.com" }
+  ]
+}

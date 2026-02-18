@@ -6,6 +6,7 @@ description: "A comprehensive guide to context engineering - the systematic proc
 tags: ["context-engineering", "ai", "adaptive-systems", "personalization", "software-architecture"]
 categories: ["Technical Guide"]
 series: ["Context Engineering"]
+authors: ["mubashir-ali"]
 showTableOfContents: true
 showHero: true
 heroStyle: "big"
