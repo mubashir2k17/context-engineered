@@ -6,7 +6,7 @@ This is a Hugo static site (the Context Engineered blog) using the [Blowfish](ht
 
 ### Prerequisites
 
-- **Hugo Extended v0.165.0** (or the version pinned in `.github/workflows/hugo.yml`). Blowfish needs the Extended edition.
+- **Hugo Extended v0.165.0** (or the version pinned in `.github/workflows/hugo.yml`). Blowfish v2.106.0 needs the Extended edition in the 0.158.0–0.165.0 range.
 - **Git submodules** initialized: `git submodule update --init --recursive`
 
 ### Dev server
