@@ -31,11 +31,21 @@
 # The footer menu is displayed at the bottom of the page
 
 [[footer]]
-  name = "Tags"
-  pageRef = "tags"
+  name = "About"
+  pageRef = "about"
   weight = 10
 
 [[footer]]
-  name = "Categories"
-  pageRef = "categories"
+  name = "CV"
+  url = "/authors/mubashir-ali/"
   weight = 20
+
+[[footer]]
+  name = "Tags"
+  pageRef = "tags"
+  weight = 30
+
+[[footer]]
+  name = "GitHub"
+  url = "https://github.com/mubashir2k17/context-engineered"
+  weight = 40

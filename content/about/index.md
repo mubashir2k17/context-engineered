@@ -1,47 +1,35 @@
 ---
 title: "About"
-description: "Learn more about Context Engineered"
+description: "About Mubashir Ali and Context Engineered"
 showDate: false
 showAuthor: false
 showReadingTime: false
 showWordCount: false
 ---
 
-## About Context Engineered
+## About this site
 
-**Context Engineered** is a platform dedicated to exploring and sharing knowledge about context engineering — the art and science of crafting prompts and interactions that make AI models do exactly what you want.
+**Context Engineered** is my notebook on how to make AI systems useful in real products. I write about context engineering, software architecture, and the delivery practices that turn experiments into systems you can operate.
 
-### Our Mission
+The name is deliberate: a good prompt is not enough. The surrounding context — retrieval, tools, constraints, evaluation, and the humans in the loop — is what makes the difference between a demo and something you can ship.
 
-We believe that understanding how to communicate effectively with AI models is one of the most valuable skills in the modern age. Our mission is to:
+## About me
 
-- **Demystify** the principles behind effective AI interactions
-- **Share** practical techniques and best practices
-- **Build** a community of learners and practitioners
-- **Explore** the frontier of human-AI collaboration
+I am **Mubashir Ali**, an Engineering Manager at [Tintash](https://tintash.com/). I have spent my career close to the work: backend architecture, APIs, mobile clients, and the project management that keeps teams shipping. I currently lead delivery while staying hands-on with design and implementation.
 
-### What is Context Engineering?
+Recent work includes leading a monolith-to-microservices migration, building large-scale data pipelines, and shipping products used by athletes, clinicians, and consumer apps. The full history is on my [CV]({{< ref "authors/mubashir-ali" >}}).
 
-Context engineering represents a transformative approach to designing intelligent systems that understand, adapt to, and respond based on contextual information. It's the difference between "meh" responses and "WOW, how did you get it to do that?!" moments.
+## What you will find here
 
-### Topics We Cover
+- **Context engineering** — systematic ways to design prompts, memory, and tool use
+- **AI in production** — evaluation, failure modes, and integration into existing systems
+- **Software delivery** — architecture, APIs, and the habits that keep teams moving
 
-- **AI & Machine Learning**: Understanding how AI systems interpret and respond to context
-- **Prompt Engineering**: Crafting effective prompts for various AI models
-- **Software Development**: Building context-aware applications and systems
-- **Best Practices**: Industry insights and proven techniques
-- **Future Trends**: Exploring what's next in AI and context engineering
+## Connect
 
-### Connect
-
-Have questions, suggestions, or want to collaborate? We'd love to hear from you!
-
-<!-- Uncomment and add your contact links
-- [GitHub](https://github.com/yourusername)
-- [Twitter/X](https://twitter.com/yourusername)
-- [LinkedIn](https://linkedin.com/in/yourusername)
-- [Email](mailto:your-email@example.com)
--->
+- [GitHub](https://github.com/mubashir2k17)
+- [LinkedIn](https://www.linkedin.com/in/mubashir-ali-software)
+- [Email](mailto:mubashir2k17@gmail.com)
 
 ---
 
