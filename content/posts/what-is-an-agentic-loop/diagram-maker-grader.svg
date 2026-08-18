@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 480" role="img" aria-labelledby="title desc">
+  <title id="title">Maker-grader separation in an agentic loop</title>
+  <desc id="desc">The maker agent writes and edits code. An independent grader in a fresh context window runs tests and reports what is wrong. The maker never grades its own homework.</desc>
+  <rect width="860" height="480" rx="24" fill="#07111f"/>
+  <text x="430" y="40" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="18" font-weight="700" fill="#f8fafc">Never let the maker grade its own homework</text>
+  <!-- maker -->
+  <rect x="40" y="72" width="320" height="300" rx="18" fill="#0d1828" stroke="#60a5fa"/>
+  <text x="200" y="108" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="16" font-weight="700" fill="#60a5fa">MAKER</text>
+  <text x="200" y="132" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#94a3b8">writes, edits, runs commands</text>
+  <rect x="72" y="156" width="256" height="40" rx="10" fill="#122036"/>
+  <text x="200" y="181" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#e2e8f0">1. Implement the change</text>
+  <rect x="72" y="208" width="256" height="40" rx="10" fill="#122036"/>
+  <text x="200" y="233" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#e2e8f0">2. Hand off a diff + evidence</text>
+  <rect x="72" y="260" width="256" height="40" rx="10" fill="#1a2436"/>
+  <text x="200" y="285" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#64748b">Does not decide done</text>
+  <text x="200" y="340" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#64748b">Same context that produced the bug</text>
+  <!-- arrow -->
+  <path d="M 372 210 H 488" stroke="#2dd4bf" stroke-width="2.5" fill="none" marker-end="url(#a1)"/>
+  <path d="M 488 250 H 372" stroke="#f5c16c" stroke-width="2.5" fill="none" marker-end="url(#a2)"/>
+  <defs>
+    <marker id="a1" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#2dd4bf"/></marker>
+    <marker id="a2" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#f5c16c"/></marker>
+  </defs>
+  <text x="430" y="198" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#2dd4bf">diff</text>
+  <text x="430" y="276" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#f5c16c">findings</text>
+  <!-- grader -->
+  <rect x="500" y="72" width="320" height="300" rx="18" fill="#0d1828" stroke="#f5c16c"/>
+  <text x="660" y="108" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="16" font-weight="700" fill="#f5c16c">GRADER</text>
+  <text x="660" y="132" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#94a3b8">fresh context, preferably read-only</text>
+  <rect x="532" y="156" width="256" height="40" rx="10" fill="#2a2110"/>
+  <text x="660" y="181" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#e2e8f0">Run tests / lint / rubric</text>
+  <rect x="532" y="208" width="256" height="40" rx="10" fill="#2a2110"/>
+  <text x="660" y="233" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#e2e8f0">Ask what is wrong?</text>
+  <rect x="532" y="260" width="256" height="40" rx="10" fill="#1a2436"/>
+  <text x="660" y="285" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#e2e8f0">Pass only with evidence</text>
+  <text x="660" y="340" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#64748b">Cannot rationalize a bug it did not write</text>
+  <rect x="40" y="392" width="780" height="56" rx="14" fill="#102033"/>
+  <text x="430" y="426" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" fill="#cbd5e1">Best grader: a deterministic script. Next best: a separate model. Worst: the same conversation saying looks good.</text>
+</svg>
