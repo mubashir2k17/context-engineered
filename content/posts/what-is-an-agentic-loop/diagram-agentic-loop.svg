@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 560" role="img" aria-labelledby="title desc">
   <title id="title">The agentic loop: gather context, take action, verify work, then repeat</title>
   <desc id="desc">A circular diagram of an AI agentic loop. Three stages sit on a ring: Gather Context, Take Action, and Verify Work. Repeat sits in the center. The loop continues until a checkable stop condition is met.</desc>

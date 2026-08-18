@@ -1,32 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 540" role="img" aria-labelledby="title desc">
   <title id="title">When to use an agentic loop and when not to</title>
   <desc id="desc">Two columns. Use loops when the next step depends on real feedback, success is checkable, and mistakes are cheap to undo. Skip loops for one-shot tasks, irreversible actions, and work that needs a known deterministic pipeline.</desc>
   <rect width="880" height="540" rx="24" fill="#07111f"/>
   <text x="440" y="42" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="18" font-weight="700" fill="#f8fafc">A simple rule for choosing a loop</text>
-  <!-- use -->
   <rect x="28" y="72" width="400" height="428" rx="18" fill="#0d1f1c" stroke="#2dd4bf"/>
   <text x="228" y="112" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="16" font-weight="700" fill="#2dd4bf">USE A LOOP</text>
   <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" fill="#e2e8f0">
-    <text x="56" y="156"> The next action depends on the last result</text>
-    <text x="56" y="192"> Done can be checked by a script or test</text>
-    <text x="56" y="228"> Mistakes are cheap to undo (git, sandbox)</text>
-    <text x="56" y="264"> Work spans files, tools, or retries</text>
-    <text x="56" y="300"> You can name a step cap and a budget</text>
+    <text x="56" y="156">+ The next action depends on the last result</text>
+    <text x="56" y="192">+ Done can be checked by a script or test</text>
+    <text x="56" y="228">+ Mistakes are cheap to undo (git, sandbox)</text>
+    <text x="56" y="264">+ Work spans files, tools, or retries</text>
+    <text x="56" y="300">+ You can name a step cap and a budget</text>
     <text x="56" y="352" fill="#94a3b8">Examples</text>
     <text x="56" y="380" fill="#cbd5e1">Bugfix with a failing test</text>
     <text x="56" y="408" fill="#cbd5e1">Refactor + typecheck + lint</text>
     <text x="56" y="436" fill="#cbd5e1">Migrate a module, keep tests green</text>
     <text x="56" y="464" fill="#cbd5e1">Triage CI failures on a branch</text>
   </g>
-  <!-- skip -->
   <rect x="452" y="72" width="400" height="428" rx="18" fill="#241418" stroke="#fb7185"/>
   <text x="652" y="112" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="16" font-weight="700" fill="#fb7185">SKIP THE LOOP</text>
   <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" fill="#e2e8f0">
-    <text x="480" y="156"> One LLM call already finishes the job</text>
-    <text x="480" y="192"> Success is a matter of taste, not a check</text>
-    <text x="480" y="228"> The action is irreversible or high-stakes</text>
-    <text x="480" y="264"> You need a fixed, auditable pipeline</text>
-    <text x="480" y="300"> Latency or cost budgets forbid retries</text>
+    <text x="480" y="156">- One LLM call already finishes the job</text>
+    <text x="480" y="192">- Success is a matter of taste, not a check</text>
+    <text x="480" y="228">- The action is irreversible or high-stakes</text>
+    <text x="480" y="264">- You need a fixed, auditable pipeline</text>
+    <text x="480" y="300">- Latency or cost budgets forbid retries</text>
     <text x="480" y="352" fill="#94a3b8">Examples</text>
     <text x="480" y="380" fill="#cbd5e1">Rename a symbol you already know</text>
     <text x="480" y="408" fill="#cbd5e1">Draft a design doc or commit message</text>

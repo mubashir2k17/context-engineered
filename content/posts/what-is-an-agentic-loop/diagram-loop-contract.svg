@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" role="img" aria-labelledby="title desc">
   <title id="title">Five-part loop contract for reliable agentic loops</title>
   <desc id="desc">Five building blocks of a reliable agentic loop: a checkable definition of done, an independent verifier, layered termination, persistent state, and a human checkpoint before irreversible actions.</desc>
@@ -5,7 +6,6 @@
   <text x="440" y="42" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="18" font-weight="700" fill="#f8fafc">The five-part loop contract</text>
   <text x="440" y="68" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#94a3b8">Fill in all five before you let an agent run unattended</text>
   <g font-family="ui-sans-serif, system-ui, sans-serif">
-    <!-- 1 -->
     <rect x="28" y="96" width="156" height="248" rx="16" fill="#0d1828" stroke="#2dd4bf"/>
     <circle cx="106" cy="132" r="18" fill="#134e4a"/>
     <text x="106" y="137" text-anchor="middle" font-size="14" font-weight="700" fill="#2dd4bf">1</text>
@@ -14,8 +14,7 @@
     <text x="106" y="232" text-anchor="middle" font-size="12" fill="#94a3b8">Machine-</text>
     <text x="106" y="250" text-anchor="middle" font-size="12" fill="#94a3b8">checkable pass</text>
     <text x="106" y="268" text-anchor="middle" font-size="12" fill="#94a3b8">or fail. Never</text>
-    <text x="106" y="286" text-anchor="middle" font-size="12" fill="#94a3b8">make it good.</text>
-    <!-- 2 -->
+    <text x="106" y="286" text-anchor="middle" font-size="12" fill="#94a3b8">make it good.</text>
     <rect x="198" y="96" width="156" height="248" rx="16" fill="#0d1828" stroke="#60a5fa"/>
     <circle cx="276" cy="132" r="18" fill="#1e3a5f"/>
     <text x="276" y="137" text-anchor="middle" font-size="14" font-weight="700" fill="#60a5fa">2</text>
@@ -25,7 +24,6 @@
     <text x="276" y="250" text-anchor="middle" font-size="12" fill="#94a3b8">or a grader in a</text>
     <text x="276" y="268" text-anchor="middle" font-size="12" fill="#94a3b8">fresh context.</text>
     <text x="276" y="286" text-anchor="middle" font-size="12" fill="#94a3b8">Not self-grade.</text>
-    <!-- 3 -->
     <rect x="368" y="96" width="156" height="248" rx="16" fill="#0d1828" stroke="#f5c16c"/>
     <circle cx="446" cy="132" r="18" fill="#4a3514"/>
     <text x="446" y="137" text-anchor="middle" font-size="14" font-weight="700" fill="#f5c16c">3</text>
@@ -35,7 +33,6 @@
     <text x="446" y="250" text-anchor="middle" font-size="12" fill="#94a3b8">step cap, budget,</text>
     <text x="446" y="268" text-anchor="middle" font-size="12" fill="#94a3b8">no-progress</text>
     <text x="446" y="286" text-anchor="middle" font-size="12" fill="#94a3b8">detector.</text>
-    <!-- 4 -->
     <rect x="538" y="96" width="156" height="248" rx="16" fill="#0d1828" stroke="#e879f9"/>
     <circle cx="616" cy="132" r="18" fill="#4a1d4a"/>
     <text x="616" y="137" text-anchor="middle" font-size="14" font-weight="700" fill="#e879f9">4</text>
@@ -45,7 +42,6 @@
     <text x="616" y="250" text-anchor="middle" font-size="12" fill="#94a3b8">history so a crash</text>
     <text x="616" y="268" text-anchor="middle" font-size="12" fill="#94a3b8">resumes instead</text>
     <text x="616" y="286" text-anchor="middle" font-size="12" fill="#94a3b8">of restarting.</text>
-    <!-- 5 -->
     <rect x="708" y="96" width="144" height="248" rx="16" fill="#0d1828" stroke="#fb7185"/>
     <circle cx="780" cy="132" r="18" fill="#4c1d24"/>
     <text x="780" y="137" text-anchor="middle" font-size="14" font-weight="700" fill="#fb7185">5</text>

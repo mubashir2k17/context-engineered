@@ -4,7 +4,7 @@ date: 2026-08-18
 lastmod: 2026-08-18
 draft: false
 description: "An agentic loop is the gather-act-verify cycle behind AI coding agents. See how it works, a real coding example, and when you should not use one."
-summary: "An agentic loop is the control system that lets an AI coding agent gather context, take action, verify the result, and repeat until a checkable goal is met — or a hard stop fires."
+summary: "An agentic loop is the gather-act-verify cycle behind AI coding agents. See how it works, a real coding example, and when you should not use one."
 tags: ["agentic-loop", "ai-coding-agents", "loop-engineering", "react-pattern", "context-engineering", "verification"]
 categories: ["Technical Guide"]
 series: ["AI Agents"]
