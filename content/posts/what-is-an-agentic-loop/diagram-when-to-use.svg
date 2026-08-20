@@ -1,35 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 540" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 528" width="960" height="528" role="img" aria-labelledby="title desc">
   <title id="title">When to use an agentic loop and when not to</title>
-  <desc id="desc">Two columns. Use loops when the next step depends on real feedback, success is checkable, and mistakes are cheap to undo. Skip loops for one-shot tasks, irreversible actions, and work that needs a known deterministic pipeline.</desc>
-  <rect width="880" height="540" rx="24" fill="#07111f"/>
-  <text x="440" y="42" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="18" font-weight="700" fill="#f8fafc">A simple rule for choosing a loop</text>
-  <rect x="28" y="72" width="400" height="428" rx="18" fill="#0d1f1c" stroke="#2dd4bf"/>
-  <text x="228" y="112" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="16" font-weight="700" fill="#2dd4bf">USE A LOOP</text>
-  <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" fill="#e2e8f0">
-    <text x="56" y="156">+ The next action depends on the last result</text>
-    <text x="56" y="192">+ Done can be checked by a script or test</text>
-    <text x="56" y="228">+ Mistakes are cheap to undo (git, sandbox)</text>
-    <text x="56" y="264">+ Work spans files, tools, or retries</text>
-    <text x="56" y="300">+ You can name a step cap and a budget</text>
-    <text x="56" y="352" fill="#94a3b8">Examples</text>
-    <text x="56" y="380" fill="#cbd5e1">Bugfix with a failing test</text>
-    <text x="56" y="408" fill="#cbd5e1">Refactor + typecheck + lint</text>
-    <text x="56" y="436" fill="#cbd5e1">Migrate a module, keep tests green</text>
-    <text x="56" y="464" fill="#cbd5e1">Triage CI failures on a branch</text>
-  </g>
-  <rect x="452" y="72" width="400" height="428" rx="18" fill="#241418" stroke="#fb7185"/>
-  <text x="652" y="112" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="16" font-weight="700" fill="#fb7185">SKIP THE LOOP</text>
-  <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" fill="#e2e8f0">
-    <text x="480" y="156">- One LLM call already finishes the job</text>
-    <text x="480" y="192">- Success is a matter of taste, not a check</text>
-    <text x="480" y="228">- The action is irreversible or high-stakes</text>
-    <text x="480" y="264">- You need a fixed, auditable pipeline</text>
-    <text x="480" y="300">- Latency or cost budgets forbid retries</text>
-    <text x="480" y="352" fill="#94a3b8">Examples</text>
-    <text x="480" y="380" fill="#cbd5e1">Rename a symbol you already know</text>
-    <text x="480" y="408" fill="#cbd5e1">Draft a design doc or commit message</text>
-    <text x="480" y="436" fill="#cbd5e1">Deploy, migrate data, send email</text>
-    <text x="480" y="464" fill="#cbd5e1">Change billing or auth in production</text>
-  </g>
+  <desc id="desc">Two columns. Use a loop when the next step depends on real feedback and done is checkable. Skip it for one-shot, irreversible, or taste-driven work.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1.2 L 10 5 L 0 8.8 Z" fill="#1C1915"/>
+    </marker>
+    <marker id="arrow-forest" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1.2 L 10 5 L 0 8.8 Z" fill="#3A5344"/>
+    </marker>
+    <marker id="arrow-mute" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1.2 L 10 5 L 0 8.8 Z" fill="#6B6458"/>
+    </marker>
+  </defs>
+  <rect width="960" height="528" rx="8" fill="#F2EBE0" stroke="#C4BAAE" stroke-width="1"/>
+  <text x="480" y="44" text-anchor="middle" font-family="'Noto Serif', Georgia, 'Times New Roman', serif" font-size="22" fill="#1C1915">When a loop is the right tool</text>
+  <rect x="36" y="72" width="430" height="430" rx="6" fill="#FBF7F0" stroke="#C4BAAE"/>
+  <rect x="48" y="72" width="406" height="5" fill="#3A5344"/>
+  <text x="251.0" y="114" text-anchor="middle" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" letter-spacing="2" fill="#6B6458">REACH FOR A LOOP</text>
+  <text x="251.0" y="144" text-anchor="middle" font-family="'Noto Serif', Georgia, 'Times New Roman', serif" font-size="22" fill="#1C1915">Use it</text>
+  <rect x="64" y="180" width="9" height="9" fill="#3A5344"/>
+  <text x="86" y="189" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#1C1915">The next action depends on the last result</text>
+  <rect x="64" y="218" width="9" height="9" fill="#3A5344"/>
+  <text x="86" y="227" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#1C1915">Done can be checked by a script or test</text>
+  <rect x="64" y="256" width="9" height="9" fill="#3A5344"/>
+  <text x="86" y="265" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#1C1915">Mistakes are cheap to undo in git</text>
+  <rect x="64" y="294" width="9" height="9" fill="#3A5344"/>
+  <text x="86" y="303" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#1C1915">Work spans files, tools, or retries</text>
+  <rect x="64" y="332" width="9" height="9" fill="#3A5344"/>
+  <text x="86" y="341" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#1C1915">You can name a step cap and a budget</text>
+  <line x1="64" y1="380" x2="438" y2="380" stroke="#C4BAAE" stroke-width="1"/>
+  <text x="64" y="404" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" letter-spacing="1.6" fill="#6B6458">EXAMPLES</text>
+  <text x="64" y="426" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#6B6458">Bugfix with a failing test.</text>
+  <text x="64" y="446" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#6B6458">Refactor plus typecheck. CI triage.</text>
+  <rect x="494" y="72" width="430" height="430" rx="6" fill="#FBF7F0" stroke="#C4BAAE"/>
+  <rect x="506" y="72" width="406" height="5" fill="#8F4334"/>
+  <text x="709.0" y="114" text-anchor="middle" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" letter-spacing="2" fill="#6B6458">KEEP THE HUMAN</text>
+  <text x="709.0" y="144" text-anchor="middle" font-family="'Noto Serif', Georgia, 'Times New Roman', serif" font-size="22" fill="#1C1915">Skip it</text>
+  <rect x="522" y="180" width="9" height="9" fill="#8F4334"/>
+  <text x="544" y="189" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#1C1915">One model call already finishes the job</text>
+  <rect x="522" y="218" width="9" height="9" fill="#8F4334"/>
+  <text x="544" y="227" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#1C1915">Success is a matter of taste, not a check</text>
+  <rect x="522" y="256" width="9" height="9" fill="#8F4334"/>
+  <text x="544" y="265" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#1C1915">The action is irreversible or high-stakes</text>
+  <rect x="522" y="294" width="9" height="9" fill="#8F4334"/>
+  <text x="544" y="303" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#1C1915">You need a fixed, auditable pipeline</text>
+  <rect x="522" y="332" width="9" height="9" fill="#8F4334"/>
+  <text x="544" y="341" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#1C1915">Latency or cost forbids extra rounds</text>
+  <line x1="522" y1="380" x2="896" y2="380" stroke="#C4BAAE" stroke-width="1"/>
+  <text x="522" y="404" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" letter-spacing="1.6" fill="#6B6458">EXAMPLES</text>
+  <text x="522" y="426" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#6B6458">Rename a symbol you already know.</text>
+  <text x="522" y="446" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#6B6458">Deploy, migrate data, or send email.</text>
 </svg>

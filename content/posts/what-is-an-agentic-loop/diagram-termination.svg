@@ -1,20 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 430" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 492" width="960" height="492" role="img" aria-labelledby="title desc">
   <title id="title">Layered termination for an agentic loop</title>
-  <desc id="desc">Four nested stop conditions: a done-check at the center, then no-progress detection, a step cap, and an outer cost or wall-clock budget. Any layer can halt the loop.</desc>
-  <rect width="860" height="430" rx="24" fill="#07111f"/>
-  <text x="430" y="40" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="18" font-weight="700" fill="#f8fafc">Layered termination: any layer can halt the loop</text>
-  <rect x="70" y="70" width="720" height="300" rx="22" fill="#1a1420" stroke="#fb7185" stroke-width="2"/>
-  <text x="92" y="98" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" font-weight="700" fill="#fb7185">4  COST / TIME BUDGET</text>
-  <text x="430" y="98" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#94a3b8">e.g. $8 or 25 minutes - the last backstop</text>
-  <rect x="100" y="116" width="660" height="232" rx="18" fill="#1a1810" stroke="#f5c16c" stroke-width="2"/>
-  <text x="122" y="144" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" font-weight="700" fill="#f5c16c">3  STEP CAP</text>
-  <text x="430" y="144" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#94a3b8">e.g. 20 turns for a scoped bugfix</text>
-  <rect x="130" y="164" width="600" height="162" rx="16" fill="#101a28" stroke="#60a5fa" stroke-width="2"/>
-  <text x="152" y="192" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" font-weight="700" fill="#60a5fa">2  NO-PROGRESS DETECTOR</text>
-  <text x="430" y="192" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#94a3b8">same failing test, same diff, two rounds - stop</text>
-  <rect x="170" y="214" width="520" height="90" rx="14" fill="#0f241f" stroke="#2dd4bf" stroke-width="2"/>
-  <text x="430" y="252" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700" fill="#2dd4bf">1  DONE-CHECK</text>
-  <text x="430" y="276" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#cbd5e1">pytest exits 0 | tests untouched | only in-scope files changed</text>
-  <text x="430" y="402" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#64748b">A loop with only a done-check can grind forever. A loop with only a cap stops too early or too late.</text>
+  <desc id="desc">Four nested stop conditions: done-check, no-progress detector, step cap, and a cost or time budget. Each layer has its own header row.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1.2 L 10 5 L 0 8.8 Z" fill="#1C1915"/>
+    </marker>
+    <marker id="arrow-forest" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1.2 L 10 5 L 0 8.8 Z" fill="#3A5344"/>
+    </marker>
+    <marker id="arrow-mute" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1.2 L 10 5 L 0 8.8 Z" fill="#6B6458"/>
+    </marker>
+  </defs>
+  <rect width="960" height="492" rx="8" fill="#F2EBE0" stroke="#C4BAAE" stroke-width="1"/>
+  <text x="480" y="44" text-anchor="middle" font-family="'Noto Serif', Georgia, 'Times New Roman', serif" font-size="22" fill="#1C1915">Layered termination</text>
+  <text x="480" y="70" text-anchor="middle" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#6B6458">Any layer can halt the loop. A single stop is not enough.</text>
+  <rect x="40" y="92" width="880" height="348" rx="6" fill="#FBF7F0" stroke="#C4BAAE"/>
+  <text x="60" y="122" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" letter-spacing="1.6" fill="#6B6458">04</text>
+  <text x="96" y="122" font-family="'Noto Serif', Georgia, 'Times New Roman', serif" font-size="16" fill="#1C1915">Cost and time budget</text>
+  <text x="900" y="122" text-anchor="end" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#6B6458">e.g. $8 or 25 minutes</text>
+  <rect x="56" y="140" width="848" height="284" rx="5" fill="#E7DDD0" stroke="#C4BAAE"/>
+  <text x="76" y="170" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" letter-spacing="1.6" fill="#6B6458">03</text>
+  <text x="112" y="170" font-family="'Noto Serif', Georgia, 'Times New Roman', serif" font-size="16" fill="#1C1915">Step cap</text>
+  <text x="884" y="170" text-anchor="end" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#6B6458">e.g. 20 turns for a bugfix</text>
+  <rect x="72" y="188" width="816" height="220" rx="5" fill="#FBF7F0" stroke="#C4BAAE"/>
+  <text x="92" y="218" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" letter-spacing="1.6" fill="#6B6458">02</text>
+  <text x="128" y="218" font-family="'Noto Serif', Georgia, 'Times New Roman', serif" font-size="16" fill="#1C1915">No-progress detector</text>
+  <text x="868" y="218" text-anchor="end" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#6B6458">same failure, two rounds</text>
+  <rect x="88" y="236" width="784" height="156" rx="5" fill="#3A5344"/>
+  <text x="480" y="292" text-anchor="middle" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" letter-spacing="2" fill="#E7DDD0">01  DONE-CHECK</text>
+  <text x="480" y="322" text-anchor="middle" font-family="'Noto Serif', Georgia, 'Times New Roman', serif" font-size="20" fill="#F2EBE0">pytest exits 0</text>
+  <text x="480" y="350" text-anchor="middle" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#E7DDD0">Tests untouched. Only in-scope files changed.</text>
+  <text x="480" y="468" text-anchor="middle" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#6B6458">A loop with only a done-check can grind forever. A loop with only a cap stops too early.</text>
 </svg>

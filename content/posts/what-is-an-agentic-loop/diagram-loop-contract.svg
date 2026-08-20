@@ -1,56 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 580" width="960" height="580" role="img" aria-labelledby="title desc">
   <title id="title">Five-part loop contract for reliable agentic loops</title>
-  <desc id="desc">Five building blocks of a reliable agentic loop: a checkable definition of done, an independent verifier, layered termination, persistent state, and a human checkpoint before irreversible actions.</desc>
-  <rect width="880" height="420" rx="24" fill="#07111f"/>
-  <text x="440" y="42" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="18" font-weight="700" fill="#f8fafc">The five-part loop contract</text>
-  <text x="440" y="68" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#94a3b8">Fill in all five before you let an agent run unattended</text>
-  <g font-family="ui-sans-serif, system-ui, sans-serif">
-    <rect x="28" y="96" width="156" height="248" rx="16" fill="#0d1828" stroke="#2dd4bf"/>
-    <circle cx="106" cy="132" r="18" fill="#134e4a"/>
-    <text x="106" y="137" text-anchor="middle" font-size="14" font-weight="700" fill="#2dd4bf">1</text>
-    <text x="106" y="176" text-anchor="middle" font-size="14" font-weight="700" fill="#f8fafc">Definition</text>
-    <text x="106" y="196" text-anchor="middle" font-size="14" font-weight="700" fill="#f8fafc">of done</text>
-    <text x="106" y="232" text-anchor="middle" font-size="12" fill="#94a3b8">Machine-</text>
-    <text x="106" y="250" text-anchor="middle" font-size="12" fill="#94a3b8">checkable pass</text>
-    <text x="106" y="268" text-anchor="middle" font-size="12" fill="#94a3b8">or fail. Never</text>
-    <text x="106" y="286" text-anchor="middle" font-size="12" fill="#94a3b8">make it good.</text>
-    <rect x="198" y="96" width="156" height="248" rx="16" fill="#0d1828" stroke="#60a5fa"/>
-    <circle cx="276" cy="132" r="18" fill="#1e3a5f"/>
-    <text x="276" y="137" text-anchor="middle" font-size="14" font-weight="700" fill="#60a5fa">2</text>
-    <text x="276" y="176" text-anchor="middle" font-size="14" font-weight="700" fill="#f8fafc">Independent</text>
-    <text x="276" y="196" text-anchor="middle" font-size="14" font-weight="700" fill="#f8fafc">verifier</text>
-    <text x="276" y="232" text-anchor="middle" font-size="12" fill="#94a3b8">Tests, linters,</text>
-    <text x="276" y="250" text-anchor="middle" font-size="12" fill="#94a3b8">or a grader in a</text>
-    <text x="276" y="268" text-anchor="middle" font-size="12" fill="#94a3b8">fresh context.</text>
-    <text x="276" y="286" text-anchor="middle" font-size="12" fill="#94a3b8">Not self-grade.</text>
-    <rect x="368" y="96" width="156" height="248" rx="16" fill="#0d1828" stroke="#f5c16c"/>
-    <circle cx="446" cy="132" r="18" fill="#4a3514"/>
-    <text x="446" y="137" text-anchor="middle" font-size="14" font-weight="700" fill="#f5c16c">3</text>
-    <text x="446" y="176" text-anchor="middle" font-size="14" font-weight="700" fill="#f8fafc">Layered</text>
-    <text x="446" y="196" text-anchor="middle" font-size="14" font-weight="700" fill="#f8fafc">termination</text>
-    <text x="446" y="232" text-anchor="middle" font-size="12" fill="#94a3b8">Done-check,</text>
-    <text x="446" y="250" text-anchor="middle" font-size="12" fill="#94a3b8">step cap, budget,</text>
-    <text x="446" y="268" text-anchor="middle" font-size="12" fill="#94a3b8">no-progress</text>
-    <text x="446" y="286" text-anchor="middle" font-size="12" fill="#94a3b8">detector.</text>
-    <rect x="538" y="96" width="156" height="248" rx="16" fill="#0d1828" stroke="#e879f9"/>
-    <circle cx="616" cy="132" r="18" fill="#4a1d4a"/>
-    <text x="616" y="137" text-anchor="middle" font-size="14" font-weight="700" fill="#e879f9">4</text>
-    <text x="616" y="176" text-anchor="middle" font-size="14" font-weight="700" fill="#f8fafc">Persistent</text>
-    <text x="616" y="196" text-anchor="middle" font-size="14" font-weight="700" fill="#f8fafc">state</text>
-    <text x="616" y="232" text-anchor="middle" font-size="12" fill="#94a3b8">A log or git</text>
-    <text x="616" y="250" text-anchor="middle" font-size="12" fill="#94a3b8">history so a crash</text>
-    <text x="616" y="268" text-anchor="middle" font-size="12" fill="#94a3b8">resumes instead</text>
-    <text x="616" y="286" text-anchor="middle" font-size="12" fill="#94a3b8">of restarting.</text>
-    <rect x="708" y="96" width="144" height="248" rx="16" fill="#0d1828" stroke="#fb7185"/>
-    <circle cx="780" cy="132" r="18" fill="#4c1d24"/>
-    <text x="780" y="137" text-anchor="middle" font-size="14" font-weight="700" fill="#fb7185">5</text>
-    <text x="780" y="176" text-anchor="middle" font-size="14" font-weight="700" fill="#f8fafc">Human</text>
-    <text x="780" y="196" text-anchor="middle" font-size="14" font-weight="700" fill="#f8fafc">checkpoint</text>
-    <text x="780" y="232" text-anchor="middle" font-size="12" fill="#94a3b8">Review before</text>
-    <text x="780" y="250" text-anchor="middle" font-size="12" fill="#94a3b8">merge, deploy,</text>
-    <text x="780" y="268" text-anchor="middle" font-size="12" fill="#94a3b8">or any irreversible</text>
-    <text x="780" y="286" text-anchor="middle" font-size="12" fill="#94a3b8">action.</text>
-  </g>
-  <text x="440" y="388" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#64748b">Skip any one of these and the loop becomes an expensive random walk.</text>
+  <desc id="desc">Five rows: definition of done, independent verifier, layered termination, persistent state, and a human checkpoint.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1.2 L 10 5 L 0 8.8 Z" fill="#1C1915"/>
+    </marker>
+    <marker id="arrow-forest" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1.2 L 10 5 L 0 8.8 Z" fill="#3A5344"/>
+    </marker>
+    <marker id="arrow-mute" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1.2 L 10 5 L 0 8.8 Z" fill="#6B6458"/>
+    </marker>
+  </defs>
+  <rect width="960" height="580" rx="8" fill="#F2EBE0" stroke="#C4BAAE" stroke-width="1"/>
+  <text x="480" y="44" text-anchor="middle" font-family="'Noto Serif', Georgia, 'Times New Roman', serif" font-size="22" fill="#1C1915">The five-part loop contract</text>
+  <text x="480" y="70" text-anchor="middle" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#6B6458">Fill in all five before an agent runs unattended.</text>
+  <rect x="40" y="96" width="880" height="76" rx="6" fill="#FBF7F0" stroke="#C4BAAE"/>
+  <rect x="56" y="114" width="40" height="40" rx="4" fill="#1C1915"/>
+  <text x="76" y="140" text-anchor="middle" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#F2EBE0">01</text>
+  <text x="116" y="128" font-family="'Noto Serif', Georgia, 'Times New Roman', serif" font-size="18" fill="#1C1915">Definition of done</text>
+  <text x="116" y="152" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#6B6458">A machine-checkable pass or fail. Never make it good.</text>
+  <rect x="40" y="184" width="880" height="76" rx="6" fill="#FBF7F0" stroke="#C4BAAE"/>
+  <rect x="56" y="202" width="40" height="40" rx="4" fill="#1C1915"/>
+  <text x="76" y="228" text-anchor="middle" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#F2EBE0">02</text>
+  <text x="116" y="216" font-family="'Noto Serif', Georgia, 'Times New Roman', serif" font-size="18" fill="#1C1915">Independent verifier</text>
+  <text x="116" y="240" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#6B6458">Tests, linters, or a grader in a fresh context. Not self-grade.</text>
+  <rect x="40" y="272" width="880" height="76" rx="6" fill="#FBF7F0" stroke="#C4BAAE"/>
+  <rect x="56" y="290" width="40" height="40" rx="4" fill="#1C1915"/>
+  <text x="76" y="316" text-anchor="middle" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#F2EBE0">03</text>
+  <text x="116" y="304" font-family="'Noto Serif', Georgia, 'Times New Roman', serif" font-size="18" fill="#1C1915">Layered termination</text>
+  <text x="116" y="328" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#6B6458">Done-check, step cap, budget, and a no-progress detector.</text>
+  <rect x="40" y="360" width="880" height="76" rx="6" fill="#FBF7F0" stroke="#C4BAAE"/>
+  <rect x="56" y="378" width="40" height="40" rx="4" fill="#1C1915"/>
+  <text x="76" y="404" text-anchor="middle" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#F2EBE0">04</text>
+  <text x="116" y="392" font-family="'Noto Serif', Georgia, 'Times New Roman', serif" font-size="18" fill="#1C1915">Persistent state</text>
+  <text x="116" y="416" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#6B6458">A log or git history so a crash resumes instead of restarting.</text>
+  <rect x="40" y="448" width="880" height="76" rx="6" fill="#FBF7F0" stroke="#C4BAAE"/>
+  <rect x="56" y="466" width="40" height="40" rx="4" fill="#1C1915"/>
+  <text x="76" y="492" text-anchor="middle" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#F2EBE0">05</text>
+  <text x="116" y="480" font-family="'Noto Serif', Georgia, 'Times New Roman', serif" font-size="18" fill="#1C1915">Human checkpoint</text>
+  <text x="116" y="504" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#6B6458">Review before merge, deploy, or any irreversible action.</text>
+  <text x="480" y="556" text-anchor="middle" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#6B6458">Skip any one of these and the loop becomes an expensive random walk.</text>
 </svg>

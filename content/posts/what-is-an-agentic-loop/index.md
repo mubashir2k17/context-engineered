@@ -1,7 +1,7 @@
 ---
 title: "What Is an Agentic Loop? How AI Coding Agents Iterate"
 date: 2026-08-18
-lastmod: 2026-08-18
+lastmod: 2026-08-20
 draft: false
 description: "An agentic loop is the gather-act-verify cycle behind AI coding agents. See how it works, a real coding example, and when you should not use one."
 summary: "An agentic loop is the gather-act-verify cycle behind AI coding agents. See how it works, a real coding example, and when you should not use one."
@@ -16,14 +16,14 @@ showHero: true
 heroStyle: "background"
 layoutBackgroundBlur: true
 imagePosition: "center"
-featureimagecaption: "Abstract loops: iteration, feedback, and recurrence — the shape of agentic work."
+featureimagecaption: "Nested arcs in earth pigment on linen — a painted analog for iteration."
 ---
 
 <style>
 .diagram-wrap { margin: 1.75rem 0 2.25rem; }
 .diagram-wrap img { width: 100%; height: auto; border-radius: 16px; }
 .diagram-wrap figcaption { text-align: center; font-size: 0.9rem; opacity: 0.75; margin-top: 0.6rem; }
-.callout { border-left: 3px solid #2dd4bf; padding: 0.9rem 1rem; margin: 1.4rem 0; background: color-mix(in srgb, currentColor 6%, transparent); border-radius: 0 10px 10px 0; }
+.callout { border-left: 3px solid #3A5344; padding: 0.9rem 1rem; margin: 1.4rem 0; background: color-mix(in srgb, currentColor 6%, transparent); border-radius: 0 10px 10px 0; }
 </style>
 
 An **agentic loop** is the control system that turns a language model into an AI coding agent. The model does not answer once and stop. It **gathers context**, **takes an action**, **verifies the result against the world**, and **repeats** until a checkable goal is met — or a hard stop fires.
