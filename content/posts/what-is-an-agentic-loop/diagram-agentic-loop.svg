@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="960" height="480" role="img" aria-labelledby="title desc">
+  <title id="title">The agentic loop: gather, act, verify, repeat</title>
+  <desc id="desc">Three stages in a row: Gather, Act, Verify. A return path labeled Repeat closes the cycle until a stop condition.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.4 L 10 5 L 0 8.6 Z" fill="#1A1714"/>
+    </marker>
+    <marker id="arrow-forest" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.4 L 10 5 L 0 8.6 Z" fill="#3D4F40"/>
+    </marker>
+  </defs>
+  <rect width="960" height="480" rx="4" fill="#EFE6D8" stroke="#C8BFAF" stroke-width="1"/>
+  <text x="480" y="42" text-anchor="middle" font-family="'Noto Serif', Georgia, 'Times New Roman', serif" font-size="23" fill="#1A1714">The agentic loop</text>
+  <text x="480" y="68" text-anchor="middle" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#5C564E">Gather, act, verify. Repeat until a checkable stop.</text>
+  <rect x="36" y="96" width="272" height="156" rx="3" fill="#F8F3EA" stroke="#C8BFAF" stroke-width="1"/>
+  <text x="58" y="130" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#5C564E" letter-spacing="1.4">01</text>
+  <text x="58" y="166" font-family="'Noto Serif', Georgia, 'Times New Roman', serif" font-size="23" fill="#1A1714">Gather</text>
+  <text x="58" y="200" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#5C564E">Read files, search the repo,</text>
+  <text x="58" y="222" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#5C564E">inspect the current state.</text>
+  <path d="M 316 174.0 H 336" fill="none" stroke="#1A1714" stroke-width="1.35" marker-end="url(#arrow)"/>
+  <rect x="344" y="96" width="272" height="156" rx="3" fill="#F8F3EA" stroke="#C8BFAF" stroke-width="1"/>
+  <text x="366" y="130" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#5C564E" letter-spacing="1.4">02</text>
+  <text x="366" y="166" font-family="'Noto Serif', Georgia, 'Times New Roman', serif" font-size="23" fill="#1A1714">Act</text>
+  <text x="366" y="200" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#5C564E">Edit code, run tools,</text>
+  <text x="366" y="222" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#5C564E">call APIs, write patches.</text>
+  <path d="M 624 174.0 H 644" fill="none" stroke="#1A1714" stroke-width="1.35" marker-end="url(#arrow)"/>
+  <rect x="652" y="96" width="272" height="156" rx="3" fill="#F8F3EA" stroke="#C8BFAF" stroke-width="1"/>
+  <text x="674" y="130" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#5C564E" letter-spacing="1.4">03</text>
+  <text x="674" y="166" font-family="'Noto Serif', Georgia, 'Times New Roman', serif" font-size="23" fill="#1A1714">Verify</text>
+  <text x="674" y="200" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#5C564E">Tests, linters, typechecks,</text>
+  <text x="674" y="222" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#5C564E">or an independent grader.</text>
+  <path d="M 788.0 270 V 322 H 172.0 V 270" fill="none" stroke="#3D4F40" stroke-width="1.35" marker-end="url(#arrow-forest)"/>
+  <rect x="414.0" y="307.0" width="132" height="30" rx="15" fill="#EFE6D8" stroke="#3D4F40" stroke-width="1.2"/>
+  <text x="480" y="327" text-anchor="middle" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#3D4F40" letter-spacing="2.2">REPEAT</text>
+  <text x="480" y="454" text-anchor="middle" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#5C564E">The loop, not the model, is the unit of agentic coding.</text>
+</svg>

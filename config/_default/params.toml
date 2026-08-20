@@ -15,6 +15,7 @@ enableCodeCopy = true
 mainSections = ["posts"]
 
 disableImageOptimization = false
+backgroundImageWidth = 1920
 disableTextInHeader = false
 
 [header]

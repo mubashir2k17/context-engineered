@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 680" width="960" height="680" role="img" aria-labelledby="title desc">
+  <title id="title">Five iterations of an agentic loop fixing a money parser</title>
+  <desc id="desc">A vertical timeline of five loop iterations, from gathering failing tests to an independent grader pass.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.4 L 10 5 L 0 8.6 Z" fill="#1A1714"/>
+    </marker>
+    <marker id="arrow-forest" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.4 L 10 5 L 0 8.6 Z" fill="#3D4F40"/>
+    </marker>
+  </defs>
+  <rect width="960" height="680" rx="4" fill="#EFE6D8" stroke="#C8BFAF" stroke-width="1"/>
+  <text x="480" y="40" text-anchor="middle" font-family="'Noto Serif', Georgia, 'Times New Roman', serif" font-size="23" fill="#1A1714">Five loops to a passing parser</text>
+  <text x="480" y="66" text-anchor="middle" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#5C564E">Goal: parse_money() matches every fixture. Tests stay read-only.</text>
+  <line x1="56" y1="108" x2="56" y2="640" stroke="#C8BFAF" stroke-width="1.5"/>
+  <circle cx="56" cy="142.0" r="16" fill="#EFE6D8" stroke="#1A1714" stroke-width="1.6"/>
+  <text x="56" y="146.0" text-anchor="middle" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#1A1714">01</text>
+  <rect x="92" y="96" width="832" height="92" rx="3" fill="#F8F3EA" stroke="#C8BFAF" stroke-width="1"/>
+  <text x="116" y="122" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#5C564E" letter-spacing="1.6">GATHER</text>
+  <text x="116" y="146" font-family="'Noto Serif', Georgia, 'Times New Roman', serif" font-size="16" fill="#1A1714">Read billing/parse.py and the read-only tests.</text>
+  <text x="116" y="170" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#5C564E">6 failed, 2 passed. Empty string and $12.00 already work.</text>
+  <circle cx="56" cy="250.0" r="16" fill="#EFE6D8" stroke="#1A1714" stroke-width="1.6"/>
+  <text x="56" y="254.0" text-anchor="middle" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#1A1714">02</text>
+  <rect x="92" y="204" width="832" height="92" rx="3" fill="#F8F3EA" stroke="#C8BFAF" stroke-width="1"/>
+  <text x="116" y="230" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#5C564E" letter-spacing="1.6">ACT</text>
+  <text x="116" y="254" font-family="'Noto Serif', Georgia, 'Times New Roman', serif" font-size="16" fill="#1A1714">Strip $ and call Decimal(s).</text>
+  <text x="116" y="278" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#5C564E">Still 4 failed. Thousand separators and currency codes remain.</text>
+  <circle cx="56" cy="358.0" r="16" fill="#EFE6D8" stroke="#1A1714" stroke-width="1.6"/>
+  <text x="56" y="362.0" text-anchor="middle" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#1A1714">03</text>
+  <rect x="92" y="312" width="832" height="92" rx="3" fill="#F8F3EA" stroke="#C8BFAF" stroke-width="1"/>
+  <text x="116" y="338" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#5C564E" letter-spacing="1.6">ACT</text>
+  <text x="116" y="362" font-family="'Noto Serif', Georgia, 'Times New Roman', serif" font-size="16" fill="#1A1714">Detect EU versus US separators from the last comma or dot.</text>
+  <text x="116" y="386" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#5C564E">1 failed. A dash for a missing amount still raises InvalidOperation.</text>
+  <circle cx="56" cy="466.0" r="16" fill="#EFE6D8" stroke="#1A1714" stroke-width="1.6"/>
+  <text x="56" y="470.0" text-anchor="middle" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#1A1714">04</text>
+  <rect x="92" y="420" width="832" height="92" rx="3" fill="#F8F3EA" stroke="#C8BFAF" stroke-width="1"/>
+  <text x="116" y="446" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#5C564E" letter-spacing="1.6">ACT</text>
+  <text x="116" y="470" font-family="'Noto Serif', Georgia, 'Times New Roman', serif" font-size="16" fill="#1A1714">Treat blank, dash, and n/a as None.</text>
+  <text x="116" y="494" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#5C564E">8 passed, 0 failed. Typecheck and linter clean.</text>
+  <circle cx="56" cy="574.0" r="16" fill="#EFE6D8" stroke="#3D4F40" stroke-width="1.6"/>
+  <text x="56" y="578.0" text-anchor="middle" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F40">05</text>
+  <rect x="92" y="528" width="832" height="92" rx="3" fill="#F8F3EA" stroke="#3D4F40" stroke-width="1.6"/>
+  <text x="116" y="554" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F40" letter-spacing="1.6">GRADE</text>
+  <text x="116" y="578" font-family="'Noto Serif', Georgia, 'Times New Roman', serif" font-size="16" fill="#1A1714">Fresh read-only subagent asks what is wrong.</text>
+  <text x="116" y="602" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#5C564E">Locale detection misreads 1234. Tighten the grouping pattern. Tests still pass.</text>
+</svg>
