@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540" role="img" aria-labelledby="title desc">
+  <title id="title">Layered termination for an agentic loop</title>
+  <desc id="desc">Four nested stop conditions: done-check, no-progress detector, step cap, and a cost or time budget. Each layer has its own header row.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.4 L 10 5 L 0 8.6 Z" fill="#1A1714"/>
+    </marker>
+    <marker id="arrow-forest" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.4 L 10 5 L 0 8.6 Z" fill="#3D4F40"/>
+    </marker>
+  </defs>
+  <rect width="960" height="540" rx="4" fill="#EFE6D8" stroke="#C8BFAF" stroke-width="1"/>
+  <text x="480" y="40" text-anchor="middle" font-family="'Noto Serif', Georgia, 'Times New Roman', serif" font-size="23" fill="#1A1714">Layered termination</text>
+  <text x="480" y="66" text-anchor="middle" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#5C564E">Any layer can halt the loop. A single stop is not enough.</text>
+  <rect x="36" y="88" width="888" height="384" rx="3" fill="#F8F3EA" stroke="#C8BFAF" stroke-width="1"/>
+  <text x="56" y="120" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#5C564E" letter-spacing="1.2">04</text>
+  <text x="82.83" y="120" font-family="'Noto Serif', Georgia, 'Times New Roman', serif" font-size="17" fill="#1A1714">Cost and time budget</text>
+  <text x="904" y="120" text-anchor="end" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#5C564E">e.g. $8 or 25 minutes</text>
+  <rect x="56" y="140" width="848" height="316" rx="3" fill="#E4D8C6" stroke="#C8BFAF" stroke-width="1"/>
+  <text x="76" y="172" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#5C564E" letter-spacing="1.2">03</text>
+  <text x="102.48" y="172" font-family="'Noto Serif', Georgia, 'Times New Roman', serif" font-size="17" fill="#1A1714">Step cap</text>
+  <text x="884" y="172" text-anchor="end" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#5C564E">e.g. 20 turns for a bugfix</text>
+  <rect x="76" y="192" width="808" height="248" rx="3" fill="#F8F3EA" stroke="#C8BFAF" stroke-width="1"/>
+  <text x="96" y="224" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#5C564E" letter-spacing="1.2">02</text>
+  <text x="122.34" y="224" font-family="'Noto Serif', Georgia, 'Times New Roman', serif" font-size="17" fill="#1A1714">No-progress detector</text>
+  <text x="864" y="224" text-anchor="end" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#5C564E">same failure, two rounds</text>
+  <rect x="96" y="244" width="768" height="180" rx="3" fill="#3D4F40"/>
+  <text x="480" y="292" text-anchor="middle" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#E4D8C6" letter-spacing="2.0">01  DONE-CHECK</text>
+  <text x="480" y="328" text-anchor="middle" font-family="'Noto Serif', Georgia, 'Times New Roman', serif" font-size="22" fill="#EFE6D8">pytest exits 0</text>
+  <text x="480" y="364" text-anchor="middle" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#E4D8C6">Tests untouched. Only in-scope files changed.</text>
+  <text x="480" y="510" text-anchor="middle" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#5C564E">A loop with only a done-check can grind forever. A loop with only a cap stops too early.</text>
+</svg>

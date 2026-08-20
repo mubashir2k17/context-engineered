@@ -12,9 +12,10 @@ autoSwitchAppearance = true
 enableSearch = true
 enableCodeCopy = true
 
-# mainSections = ["posts"]
+mainSections = ["posts"]
 
 disableImageOptimization = false
+backgroundImageWidth = 1920
 disableTextInHeader = false
 
 [header]
@@ -59,7 +60,7 @@ disableTextInHeader = false
   showRelatedContent = true
   relatedContentLimit = 3
   showTaxonomies = true
-  showAuthorsBadges = false
+  showAuthorsBadges = true
   showWordCount = true
   sharingLinks = ["linkedin", "twitter", "reddit", "email"]
   showZenMode = false

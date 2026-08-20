@@ -1,91 +1,89 @@
 # Context Engineered
 
-A personal branding and technical blog focused on context engineering, AI, and software development.
+Personal site and technical blog by [Mubashir Ali](https://github.com/mubashir2k17) on context engineering, AI, and software development.
 
-🌐 **Live Site**: [context-engineered.com](https://context-engineered.com)
+🌐 **Live site**: [context-engineered.com](https://context-engineered.com)
 
 ## About
 
-This website is built with [Hugo](https://gohugo.io/) using the beautiful [Blowfish](https://blowfish.page/) theme. It's designed for sharing insights about context engineering, AI interactions, and the future of human-AI collaboration.
+This site is built with [Hugo](https://gohugo.io/) and the [Blowfish](https://blowfish.page/) theme. It is a place to write about making AI systems useful in production — prompt and context design, architecture, and delivery.
 
 ## Development
 
 ### Prerequisites
 
-- [Hugo Extended](https://gohugo.io/installation/) (v0.140.0 or later)
+- [Hugo Extended](https://gohugo.io/installation/) v0.165.0 (or a nearby Extended release)
+- Git, with submodule support
 
-### Quick Start
+### Quick start
 
-1. Clone the repository with submodules:
-   ```bash
-   git clone --recurse-submodules https://github.com/yourusername/context-engineered.git
-   cd context-engineered
-   ```
+```bash
+git clone --recurse-submodules https://github.com/mubashir2k17/context-engineered.git
+cd context-engineered
+hugo server -D
+```
 
-2. If you already cloned without submodules, initialize them:
-   ```bash
-   git submodule update --init --recursive
-   ```
+If the clone was done without submodules:
 
-3. Start the development server:
-   ```bash
-   hugo server -D
-   ```
+```bash
+git submodule update --init --recursive
+```
 
-4. Open [http://localhost:1313](http://localhost:1313) in your browser.
+Then open [http://localhost:1313](http://localhost:1313).
 
-### Creating New Content
+### Creating content
 
-Create a new blog post:
 ```bash
 hugo new content posts/my-new-post/index.md
 ```
 
-### Building for Production
+New posts use the `mubashir-ali` author by default. Keep `draft: true` until the post is ready.
+
+### Building for production
 
 ```bash
 hugo --gc --minify
 ```
 
-The generated site will be in the `public/` directory.
+Output is written to `public/`.
 
 ## Deployment
 
-This site is automatically deployed to GitHub Pages when changes are pushed to the `main` branch. The deployment is handled by GitHub Actions (see `.github/workflows/hugo.yml`).
+Pushes to `main` build and deploy the site to GitHub Pages via `.github/workflows/hugo.yml`. Pull requests run the same Hugo build without deploying.
 
-## Project Structure
+**Pages source must be GitHub Actions.** In the repository: Settings → Pages → Build and deployment → Source → **GitHub Actions**. If Source stays on "Deploy from a branch", GitHub also runs its Jekyll `pages-build-deployment` workflow, which fails for this Hugo project and can fight the Actions deploy.
+
+The production `baseURL` is `https://context-engineered.com/`. `hugo server` overrides this locally. For a local production-style build use `--baseURL http://localhost:1313/`.
+
+## Project structure
 
 ```
 .
 ├── archetypes/          # Content templates
-├── assets/              # Asset files (images, etc.)
-├── config/_default/     # Hugo configuration files
-├── content/             # Website content (Markdown files)
+├── config/_default/     # Hugo configuration
+├── content/             # Markdown content
 │   ├── posts/          # Blog posts
+│   ├── authors/        # Author / CV pages
 │   └── about/          # About page
-├── layouts/             # Custom layout templates (optional)
-├── static/              # Static files (CNAME, favicon, etc.)
+├── data/authors/        # Author metadata
+├── static/              # Files copied as-is (CNAME, .nojekyll)
 └── themes/blowfish/     # Blowfish theme (git submodule)
 ```
 
 ## Configuration
 
-The site configuration is split into multiple files in `config/_default/`:
+Site config lives in `config/_default/`:
 
-- `hugo.toml` - Main Hugo configuration
-- `languages.en.toml` - Language and author settings
-- `params.toml` - Theme parameters
-- `menus.en.toml` - Navigation menus
-- `markup.toml` - Markdown rendering settings
+- `hugo.toml` — Hugo core settings
+- `languages.en.toml` — title, author, social links
+- `params.toml` — Blowfish theme parameters
+- `menus.en.toml` — header and footer navigation
+- `markup.toml` — Markdown / highlighting
 
 ## Theme
 
-This site uses the [Blowfish](https://blowfish.page/) theme. For theme documentation and customization options, visit [blowfish.page/docs](https://blowfish.page/docs/).
+Blowfish is vendored as a git submodule. Theme docs: [blowfish.page/docs](https://blowfish.page/docs/).
 
 ## License
 
-Content is © Context Engineered. The Hugo framework and Blowfish theme have their own licenses.
-
----
-
-*Built with curiosity, powered by experimentation, and shared with love* ❤️
+Content is © Mubashir Ali. Hugo and Blowfish have their own licenses.

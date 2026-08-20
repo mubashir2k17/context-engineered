@@ -1,31 +1,33 @@
+# Agents
+
 ## Cursor Cloud specific instructions
 
-### Overview
+This is a Hugo static site (the Context Engineered blog) using the [Blowfish](https://blowfish.page/) theme as a git submodule at `themes/blowfish`. There is no backend, database, or Docker Compose stack.
 
-This is a Hugo static site ("Context Engineered" blog) using the [Blowfish](https://blowfish.page/) theme via git submodule. There are no backend services, databases, or Docker containers.
+### Prerequisites
 
-### Prerequisites (installed by update script)
+- **Hugo Extended v0.165.0** (or the version pinned in `.github/workflows/hugo.yml`). Blowfish v2.106.0 needs the Extended edition in the 0.158.0–0.165.0 range.
+- **Git submodules** initialized: `git submodule update --init --recursive`
 
-- **Hugo Extended v0.141.0** — installed from the official `.deb` release. Must be the Extended edition (required by the Blowfish theme for Sass processing).
-- **Git submodules** — the Blowfish theme lives at `themes/blowfish` and must be initialized.
-
-### Running the dev server
+### Dev server
 
 ```bash
 hugo server -D --bind 0.0.0.0 --baseURL http://localhost:1313
 ```
 
-The `-D` flag includes draft content. The site is served at `http://localhost:1313`.
+The site is at `http://localhost:1313`. `-D` includes drafts.
 
-### Building
+### Production build (the validation step)
+
+There is no separate test or lint suite. A clean Hugo build is the check:
 
 ```bash
-hugo --gc --minify
+hugo --gc --minify --printPathWarnings
 ```
 
-Output goes to `public/`.
+Output goes to `public/`. The build fails on broken templates, invalid front matter, or missing required assets.
 
-### Creating content
+### New content
 
 ```bash
 hugo new content posts/my-post-slug/index.md
@@ -33,7 +35,7 @@ hugo new content posts/my-post-slug/index.md
 
 ### Non-obvious notes
 
-- There is no `package.json`, `Makefile`, linter config, or test framework in this project. Hugo itself is the only tool.
-- Hugo has no traditional "lint" or "test" commands. The build (`hugo --gc --minify`) serves as the validation step — it will fail on broken templates, invalid front matter, or missing assets.
-- Configuration is split across 5 TOML files in `config/_default/` (see `README.md` for details).
-- The `baseURL` in `hugo.toml` is set to `https://context-engineered.com/`. For local dev, the `hugo server` command overrides this automatically, but when building for local inspection use `--baseURL http://localhost:1313/`.
+- Configuration is split across TOML files in `config/_default/`. Author identity and social links are in `languages.en.toml`; CV content is in `content/authors/mubashir-ali/_index.md`.
+- `baseURL` in `hugo.toml` is `https://context-engineered.com/`. `hugo server` overrides it. For inspecting a production-style build locally, pass `--baseURL http://localhost:1313/`.
+- GitHub Pages must use Source = **GitHub Actions**. Branch/Jekyll deploys fail because this is not a Jekyll site.
+- Do not edit files under `themes/blowfish/` for site customizations; change site config, `content/`, `data/`, `static/`, or add overlays under `layouts/` / `assets/` at the repo root.
