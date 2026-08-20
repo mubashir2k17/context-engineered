@@ -13,17 +13,16 @@ authors: ["mubashir-ali"]
 keywords: ["agentic loop", "what is an agentic loop", "AI coding agents", "gather act verify", "ReAct loop", "loop engineering"]
 showTableOfContents: true
 showHero: true
-heroStyle: "background"
-layoutBackgroundBlur: true
-imagePosition: "center top"
-featureimagecaption: "Nested arcs in earth pigment on linen."
+heroStyle: "big"
+featureimagecaption: "Oil study of an open loop on linen."
 ---
 
 <style>
+article .single_hero_round { max-height: none; object-fit: contain; height: auto; background: #E6D9C6; }
 .diagram-wrap { margin: 1.75rem 0 2.25rem; }
-.diagram-wrap img { width: 100%; height: auto; border-radius: 16px; }
+.diagram-wrap img { width: 100%; height: auto; border-radius: 4px; }
 .diagram-wrap figcaption { text-align: center; font-size: 0.9rem; opacity: 0.75; margin-top: 0.6rem; }
-.callout { border-left: 3px solid #3A5344; padding: 0.9rem 1rem; margin: 1.4rem 0; background: color-mix(in srgb, currentColor 6%, transparent); border-radius: 0 10px 10px 0; }
+.callout { border-left: 3px solid #3D4F40; padding: 0.9rem 1rem; margin: 1.4rem 0; background: color-mix(in srgb, currentColor 6%, transparent); border-radius: 0 4px 4px 0; }
 </style>
 
 An **agentic loop** is the control system that turns a language model into an AI coding agent. The model does not answer once and stop. It **gathers context**, **takes an action**, **verifies the result against the world**, and **repeats** until a checkable goal is met — or a hard stop fires.
@@ -39,7 +38,7 @@ This guide is the practical version: what an agentic loop is, how it differs fro
 </div>
 
 <figure class="diagram-wrap">
-  <img src="diagram-agentic-loop.svg" alt="Circular diagram of an agentic loop with three stages: gather context, take action, and verify work, repeating until a stop condition" width="840" height="560">
+  <img src="diagram-agentic-loop.svg" alt="Three-stage diagram of an agentic loop: gather context, take action, and verify work, then repeat" width="960" height="480">
   <figcaption>Figure 1. Anthropic’s working formulation of the agent loop: gather context, take action, verify work, repeat.</figcaption>
 </figure>
 
@@ -91,7 +90,7 @@ Anthropic’s [Claude Agent SDK](https://claude.com/blog/building-agents-with-th
 A turn inside a harness such as the [Claude Agent SDK loop](https://code.claude.com/docs/en/agent-sdk/agent-loop.md) is one round trip: the model requests tools, the runtime executes them, results feed back, and the cycle continues until the model returns a response with no tool calls — or a cap kills it.
 
 <figure class="diagram-wrap">
-  <img src="diagram-chat-vs-loop.svg" alt="Comparison of a single-shot chatbot flow versus an agentic loop that reasons, acts, observes, and repeats" width="860" height="500">
+  <img src="diagram-chat-vs-loop.svg" alt="Comparison of a single-shot chatbot flow versus an agentic loop that reasons, acts, observes, and repeats" width="960" height="500">
   <figcaption>Figure 2. In chat, you close the feedback gap. In an agentic loop, the loop does.</figcaption>
 </figure>
 
@@ -141,7 +140,7 @@ When `pytest` returns a traceback, a looping agent can treat that traceback as t
 Five decisions separate a loop that converges from a loop that bills you for a random walk. Call it the **loop contract**.
 
 <figure class="diagram-wrap">
-  <img src="diagram-loop-contract.svg" alt="Five-part loop contract: definition of done, independent verifier, layered termination, persistent state, and a human checkpoint" width="880" height="420">
+  <img src="diagram-loop-contract.svg" alt="Five-part loop contract: definition of done, independent verifier, layered termination, persistent state, and a human checkpoint" width="960" height="620">
   <figcaption>Figure 3. Fill in all five before you let an agent run unattended.</figcaption>
 </figure>
 
@@ -164,7 +163,7 @@ The verification ladder, from strongest to weakest:
 3. **LLM-as-judge in the same conversation** — better than nothing, and still the agent grading its own homework.
 
 <figure class="diagram-wrap">
-  <img src="diagram-maker-grader.svg" alt="Maker agent writes code and an independent grader in a fresh context window checks the work" width="860" height="480">
+  <img src="diagram-maker-grader.svg" alt="Maker agent writes code and an independent grader in a fresh context window checks the work" width="960" height="520">
   <figcaption>Figure 4. Maker-grader separation. The reviewer should be read-only and biased toward finding faults.</figcaption>
 </figure>
 
@@ -175,7 +174,7 @@ Two practical rules: keep the grader **read-only** so it reports instead of sile
 A single stop condition is not enough. Use layers, and let *any* layer halt the run.
 
 <figure class="diagram-wrap">
-  <img src="diagram-termination.svg" alt="Nested stop conditions for an agentic loop: done-check, no-progress detector, step cap, and cost or time budget" width="860" height="430">
+  <img src="diagram-termination.svg" alt="Nested stop conditions for an agentic loop: done-check, no-progress detector, step cap, and cost or time budget" width="960" height="540">
   <figcaption>Figure 5. Done-check, no-progress, step cap, budget. A loop without a budget is not autonomous — it is a runaway process.</figcaption>
 </figure>
 
@@ -250,7 +249,7 @@ def test_parse_money_fixtures():
 ### What the loop actually did
 
 <figure class="diagram-wrap">
-  <img src="diagram-coding-example.svg" alt="Timeline of five agentic loop iterations fixing a money parser from failing tests to an independent grader pass" width="900" height="560">
+  <img src="diagram-coding-example.svg" alt="Timeline of five agentic loop iterations fixing a money parser from failing tests to an independent grader pass" width="960" height="680">
   <figcaption>Figure 6. Five iterations. Each observation, not the model’s confidence, chooses the next edit.</figcaption>
 </figure>
 
@@ -339,7 +338,7 @@ The model is a subroutine. The loop owns done, money, and boredom.
 Use a loop when **the next action depends on the last observation**, **done is machine-checkable**, and **mistakes are cheap to undo**.
 
 <figure class="diagram-wrap">
-  <img src="diagram-when-to-use.svg" alt="Two-column guide showing when to use an agentic loop and when to skip it" width="880" height="540">
+  <img src="diagram-when-to-use.svg" alt="Two-column guide showing when to use an agentic loop and when to skip it" width="960" height="560">
   <figcaption>Figure 7. If you cannot name a sensor and a stop, you do not have a loop. You have a hope.</figcaption>
 </figure>
 
