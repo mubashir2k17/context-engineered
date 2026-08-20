@@ -14,9 +14,9 @@ keywords: ["agentic loop", "what is an agentic loop", "AI coding agents", "gathe
 showTableOfContents: true
 showHero: true
 heroStyle: "background"
-layoutBackgroundBlur: true
+layoutBackgroundBlur: false
 imagePosition: "center"
-featureimagecaption: "Nested arcs in earth pigment on linen — a painted analog for iteration."
+featureimagecaption: "Nested arcs in earth pigment on linen."
 ---
 
 <style>
