@@ -7,14 +7,15 @@ showReadingTime: false
 showWordCount: false
 ---
 
-## Senior Software Engineer
+## Engineering Manager
 
 - Email: [mubashir2k17@gmail.com](mailto:mubashir2k17@gmail.com)
 - LinkedIn: [Mubashir Ali](https://www.linkedin.com/in/mubashir-ali-software)
+- GitHub: [mubashir2k17](https://github.com/mubashir2k17)
 
 ## Professional Summary
 
-Mubashir Ali is a Technical Lead at Tintash and a backend engineer who has led multiple projects to successful delivery. He has worked across mobile and web application development, while remaining hands-on with implementation. His responsibilities include requirement analysis, project management, sprint planning, architecture design, UI/UX oversight, backend development, technical support, and maintenance.
+Mubashir Ali is an Engineering Manager at Tintash and a backend engineer who has led multiple projects to successful delivery. He has worked across mobile and web application development, while remaining hands-on with implementation. His responsibilities include requirement analysis, project management, sprint planning, architecture design, UI/UX oversight, backend development, technical support, and maintenance.
 
 ## Experience
 
@@ -40,7 +41,7 @@ TPL provides a platform for current and former athletes to engage with fans thro
 
 **Tools and Technologies**
 
-Python, Django, Django REST Framework, React, Readpanda, Git pre-commits, Bash, Docker, AWS, Lucidcharts, Figma
+Python, Django, Django REST Framework, React, Redpanda, Git pre-commits, Bash, Docker, AWS, Lucidchart, Figma
 
 Link: <https://theplayerslounge.io/>
 

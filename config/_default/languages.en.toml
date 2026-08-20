@@ -1,6 +1,5 @@
-disabled = false
-languageCode = "en"
-languageName = "English"
+locale = "en"
+label = "English"
 weight = 1
 title = "Context Engineered"
 
@@ -9,20 +8,16 @@ title = "Context Engineered"
   isoCode = "en"
   rtl = false
   dateFormat = "January 2, 2006"
-  description = "Personal branding and technical blog focused on context engineering, AI, and software development"
-  copyright = "© 2024-2025 Context Engineered. All rights reserved."
+  description = "Writing by Mubashir Ali on context engineering, AI-assisted development, and building reliable software."
+  copyright = "© 2024–2026 Mubashir Ali. All rights reserved."
 
 [params.author]
-  name = "Context Engineered"
-  # email = "your-email@example.com"
-  # image = "img/author.jpg"
-  # imageQuality = 96
-  headline = "Mastering the Art of Context Engineering"
-  bio = "Where prompts become magic. Exploring context engineering, AI interactions, and the future of human-AI collaboration."
-  # Uncomment and customize the links you want to display
-  # links = [
-  #   { github = "https://github.com/yourusername" },
-  #   { linkedin = "https://linkedin.com/in/yourusername" },
-  #   { x-twitter = "https://twitter.com/yourusername" },
-  #   { email = "mailto:your-email@example.com" },
-  # ]
+  name = "Mubashir Ali"
+  email = "mubashir2k17@gmail.com"
+  headline = "Engineering Manager and backend engineer. Writing about context engineering, AI, and software delivery."
+  bio = "I lead engineering at Tintash and write about making AI systems useful in real products — from prompt and context design to architecture, delivery, and team practice."
+  links = [
+    { github = "https://github.com/mubashir2k17" },
+    { linkedin = "https://www.linkedin.com/in/mubashir-ali-software" },
+    { email = "mailto:mubashir2k17@gmail.com" },
+  ]

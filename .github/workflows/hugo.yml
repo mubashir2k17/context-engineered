@@ -1,78 +1,124 @@
-# Hugo deployment workflow for GitHub Pages
+# Build and deploy the Hugo site to GitHub Pages.
+# Blowfish requires Hugo Extended (Sass/SCSS). Official Hugo Pages docs:
+# https://gohugo.io/host-and-deploy/host-on-github-pages/
+#
+# GitHub Pages → Settings → Pages → Source must be "GitHub Actions".
+# Leaving Source on "Deploy from a branch" also runs GitHub's Jekyll
+# pages-build-deployment workflow, which fails for this Hugo repo.
 name: Deploy Hugo site to Pages
 
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches:
       - main
-
-  # Allows you to run this workflow manually from the Actions tab
+  pull_request:
+    branches:
+      - main
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
-# Default to bash
 defaults:
   run:
     shell: bash
 
 jobs:
-  # Build job
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.141.0
+      DART_SASS_VERSION: 1.102.0
+      HUGO_VERSION: 0.165.0
+      TZ: Asia/Karachi
     steps:
-      - name: Install Hugo CLI
-        run: |
-          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
-          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
-
-      - name: Install Dart Sass
-        run: sudo snap install dart-sass
-
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           submodules: recursive
           fetch-depth: 0
 
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v5
+        if: github.event_name != 'pull_request'
+        uses: actions/configure-pages@v6
 
-      - name: Install Node.js dependencies
-        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+      - name: Create a local tools directory
+        run: mkdir -p "${HOME}/.local"
+
+      - name: Install Dart Sass
+        run: |
+          echo "Installing Dart Sass ${DART_SASS_VERSION}..."
+          curl -sfL --output-dir "${{ runner.temp }}" -O "https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz"
+          tar -C "${HOME}/.local" -xf "${{ runner.temp }}/dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz"
+          echo "${HOME}/.local/dart-sass" >> "${GITHUB_PATH}"
+
+      - name: Install Hugo Extended
+        run: |
+          echo "Installing Hugo Extended ${HUGO_VERSION}..."
+          curl -sfL --output-dir "${{ runner.temp }}" -O "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
+          mkdir -p "${HOME}/.local/hugo"
+          tar -C "${HOME}/.local/hugo" -xf "${{ runner.temp }}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
+          echo "${HOME}/.local/hugo" >> "${GITHUB_PATH}"
+
+      - name: Log tool versions
+        run: |
+          echo "Dart Sass: $(sass --version)"
+          echo "Hugo: $(hugo version)"
+
+      - name: Cache restore
+        id: cache-restore
+        uses: actions/cache/restore@v6
+        with:
+          path: ${{ runner.temp }}/.cache/hugo
+          key: hugo-${{ runner.os }}-${{ env.HUGO_VERSION }}-${{ github.run_id }}
+          restore-keys: |
+            hugo-${{ runner.os }}-${{ env.HUGO_VERSION }}-
+            hugo-${{ runner.os }}-
 
       - name: Build with Hugo
         env:
-          HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
-          TZ: America/Los_Angeles
+          HUGO_ENV: production
+          HUGO_CACHEDIR: ${{ runner.temp }}/.cache/hugo
+          HUGO_BASEURL: ${{ steps.pages.outputs.base_url || 'https://context-engineered.com' }}
         run: |
           hugo \
             --gc \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
+            --baseURL "${HUGO_BASEURL}/" \
+            --cacheDir "${HUGO_CACHEDIR}" \
+            --printPathWarnings
+
+      - name: Verify build output
+        run: |
+          test -f public/index.html
+          test -f public/CNAME
+          grep -q "context-engineered.com" public/CNAME
+          test -d public/posts
+          test -d public/about
+          test -d public/authors/mubashir-ali
+
+      - name: Cache save
+        uses: actions/cache/save@v6
+        with:
+          path: ${{ runner.temp }}/.cache/hugo
+          key: ${{ steps.cache-restore.outputs.cache-primary-key }}
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v5
         with:
+          include-hidden-files: false
           path: ./public
 
-  # Deployment job
   deploy:
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -81,4 +127,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
