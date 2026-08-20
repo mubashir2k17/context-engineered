@@ -14,8 +14,8 @@ keywords: ["agentic loop", "what is an agentic loop", "AI coding agents", "gathe
 showTableOfContents: true
 showHero: true
 heroStyle: "background"
-layoutBackgroundBlur: false
-imagePosition: "center"
+layoutBackgroundBlur: true
+imagePosition: "center top"
 featureimagecaption: "Nested arcs in earth pigment on linen."
 ---
 
