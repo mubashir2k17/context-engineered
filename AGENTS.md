@@ -39,3 +39,19 @@ hugo new content posts/my-post-slug/index.md
 - `baseURL` in `hugo.toml` is `https://context-engineered.com/`. `hugo server` overrides it. For inspecting a production-style build locally, pass `--baseURL http://localhost:1313/`.
 - GitHub Pages must use Source = **GitHub Actions**. Branch/Jekyll deploys fail because this is not a Jekyll site.
 - Do not edit files under `themes/blowfish/` for site customizations; change site config, `content/`, `data/`, `static/`, or add overlays under `layouts/` / `assets/` at the repo root.
+
+## Agent skills
+
+Engineering skills from [mattpocock/skills](https://github.com/mattpocock/skills) live in `.agents/skills/`. Update them with `npx skills update`. Run `/setup-matt-pocock-skills` again only to switch trackers or restart from scratch.
+
+### Issue tracker
+
+GitHub Issues on `mubashir2k17/context-engineered` via the `gh` CLI. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Canonical roles map 1:1 to tracker labels (`needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`). See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Single-context: one root `CONTEXT.md` plus `docs/adr/`. See `docs/agents/domain.md`.
