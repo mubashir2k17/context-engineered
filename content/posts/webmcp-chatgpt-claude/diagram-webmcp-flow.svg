@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" width="960" height="360" role="img" aria-labelledby="title desc">
+  <title id="title">How a WebMCP tool call works</title>
+  <desc id="desc">Four steps: the page registers tools, the agent discovers them, the user or browser approves a call, the page executes and updates the UI.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.4 L 10 5 L 0 8.6 Z" fill="#1A1714"/>
+    </marker>
+  </defs>
+  <rect width="960" height="360" rx="4" fill="#EFE6D8" stroke="#C8BFAF" stroke-width="1"/>
+  <text x="480" y="40" text-anchor="middle" font-family="'Noto Serif', Georgia, 'Times New Roman', serif" font-size="23" fill="#1A1714">A tool call on a live page</text>
+  <rect x="28" y="72" width="210" height="210" rx="3" fill="#F8F3EA" stroke="#C8BFAF" stroke-width="1"/>
+  <text x="48" y="106" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#5C564E" letter-spacing="1.4">01</text>
+  <text x="48" y="142" font-family="'Noto Serif', Georgia, 'Times New Roman', serif" font-size="20" fill="#1A1714">Register</text>
+  <text x="48" y="176" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#5C564E">The page calls</text>
+  <text x="48" y="196" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#5C564E">registerTool() with</text>
+  <text x="48" y="216" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#5C564E">a name, schema,</text>
+  <text x="48" y="236" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#5C564E">and execute handler.</text>
+  <path d="M 246 177 H 266" fill="none" stroke="#1A1714" stroke-width="1.35" marker-end="url(#arrow)"/>
+  <rect x="276" y="72" width="210" height="210" rx="3" fill="#F8F3EA" stroke="#C8BFAF" stroke-width="1"/>
+  <text x="296" y="106" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#5C564E" letter-spacing="1.4">02</text>
+  <text x="296" y="142" font-family="'Noto Serif', Georgia, 'Times New Roman', serif" font-size="20" fill="#1A1714">Discover</text>
+  <text x="296" y="176" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#5C564E">The browser agent</text>
+  <text x="296" y="196" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#5C564E">lists tools on the</text>
+  <text x="296" y="216" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#5C564E">open tab. Closing</text>
+  <text x="296" y="236" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#5C564E">the tab drops them.</text>
+  <path d="M 494 177 H 514" fill="none" stroke="#1A1714" stroke-width="1.35" marker-end="url(#arrow)"/>
+  <rect x="524" y="72" width="210" height="210" rx="3" fill="#F8F3EA" stroke="#C8BFAF" stroke-width="1"/>
+  <text x="544" y="106" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#5C564E" letter-spacing="1.4">03</text>
+  <text x="544" y="142" font-family="'Noto Serif', Georgia, 'Times New Roman', serif" font-size="20" fill="#1A1714">Approve</text>
+  <text x="544" y="176" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#5C564E">The client reviews</text>
+  <text x="544" y="196" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#5C564E">the call. High-stakes</text>
+  <text x="544" y="216" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#5C564E">tools should wait</text>
+  <text x="544" y="236" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#5C564E">on a human confirm.</text>
+  <path d="M 742 177 H 762" fill="none" stroke="#1A1714" stroke-width="1.35" marker-end="url(#arrow)"/>
+  <rect x="772" y="72" width="160" height="210" rx="3" fill="#F8F3EA" stroke="#C8BFAF" stroke-width="1"/>
+  <text x="792" y="106" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#5C564E" letter-spacing="1.4">04</text>
+  <text x="792" y="142" font-family="'Noto Serif', Georgia, 'Times New Roman', serif" font-size="20" fill="#1A1714">Act</text>
+  <text x="792" y="176" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#5C564E">execute() runs</text>
+  <text x="792" y="196" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#5C564E">your app logic.</text>
+  <text x="792" y="216" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#5C564E">The UI updates</text>
+  <text x="792" y="236" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#5C564E">in place.</text>
+</svg>

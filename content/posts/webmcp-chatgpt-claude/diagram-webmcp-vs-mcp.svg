@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="title desc">
+  <title id="title">MCP versus WebMCP</title>
+  <desc id="desc">Two panels. MCP is a persistent server of tools available anywhere. WebMCP is a live webpage that registers tools for a browser agent while the tab is open.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.4 L 10 5 L 0 8.6 Z" fill="#1A1714"/>
+    </marker>
+  </defs>
+  <rect width="960" height="420" rx="4" fill="#EFE6D8" stroke="#C8BFAF" stroke-width="1"/>
+  <text x="480" y="40" text-anchor="middle" font-family="'Noto Serif', Georgia, 'Times New Roman', serif" font-size="23" fill="#1A1714">Same idea, different place</text>
+  <text x="480" y="66" text-anchor="middle" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#5C564E">Named tools with schemas. MCP lives on a server. WebMCP lives in the tab.</text>
+  <rect x="36" y="92" width="424" height="272" rx="3" fill="#F8F3EA" stroke="#C8BFAF" stroke-width="1"/>
+  <text x="58" y="126" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#5C564E" letter-spacing="1.4">MCP</text>
+  <text x="58" y="162" font-family="'Noto Serif', Georgia, 'Times New Roman', serif" font-size="23" fill="#1A1714">Backend protocol</text>
+  <text x="58" y="198" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#5C564E">JSON-RPC server. Tools work with or</text>
+  <text x="58" y="220" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#5C564E">without a page open. Persistent.</text>
+  <text x="58" y="254" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#5C564E">Desktop, cloud, IDEs, any agent that</text>
+  <text x="58" y="276" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#5C564E">can run or call an MCP server.</text>
+  <text x="58" y="318" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#3D4F40">Use for APIs, records, background work.</text>
+  <rect x="500" y="92" width="424" height="272" rx="3" fill="#F8F3EA" stroke="#C8BFAF" stroke-width="1"/>
+  <text x="522" y="126" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#5C564E" letter-spacing="1.4">WEBMCP</text>
+  <text x="522" y="162" font-family="'Noto Serif', Georgia, 'Times New Roman', serif" font-size="23" fill="#1A1714">Browser API</text>
+  <text x="522" y="198" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#5C564E">JavaScript on the live page. Tools exist</text>
+  <text x="522" y="220" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#5C564E">only while that tab is open. Ephemeral.</text>
+  <text x="522" y="254" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#5C564E">Browser agents share cookies, the DOM,</text>
+  <text x="522" y="276" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#5C564E">and the signed-in UI of the open tab.</text>
+  <text x="522" y="318" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#3D4F40">Use for dashboards, editors, checkout.</text>
+</svg>
