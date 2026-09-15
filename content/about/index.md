@@ -17,7 +17,7 @@ The name is deliberate: a good prompt is not enough. The surrounding context —
 
 I am **Mubashir Ali**, an Engineering Manager at [Tintash](https://tintash.com/). I have spent my career close to the work: backend architecture, APIs, mobile clients, and the project management that keeps teams shipping. I currently lead delivery while staying hands-on with design and implementation.
 
-Recent work includes leading a monolith-to-microservices migration, building large-scale data pipelines, and shipping products used by athletes, clinicians, and consumer apps. The full history is on my [CV]({{< ref "authors/mubashir-ali" >}}).
+Recent work includes leading a monolith-to-microservices migration, building large-scale data pipelines, and shipping products used by athletes, clinicians, and consumer apps.
 
 ## What you will find here
 
