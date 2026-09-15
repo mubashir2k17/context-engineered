@@ -13,11 +13,6 @@
   weight = 20
 
 [[main]]
-  name = "CV"
-  url = "/authors/mubashir-ali/"
-  weight = 25
-
-[[main]]
   name = "Tags"
   pageRef = "tags"
   weight = 30
@@ -34,11 +29,6 @@
   name = "About"
   pageRef = "about"
   weight = 10
-
-[[footer]]
-  name = "CV"
-  url = "/authors/mubashir-ali/"
-  weight = 20
 
 [[footer]]
   name = "Tags"
