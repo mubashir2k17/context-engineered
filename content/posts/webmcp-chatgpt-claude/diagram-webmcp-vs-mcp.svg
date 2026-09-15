@@ -23,7 +23,7 @@
   <text x="522" y="162" font-family="'Noto Serif', Georgia, 'Times New Roman', serif" font-size="23" fill="#1A1714">Browser API</text>
   <text x="522" y="198" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#5C564E">JavaScript on the live page. Tools exist</text>
   <text x="522" y="220" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#5C564E">only while that tab is open. Ephemeral.</text>
-  <text x="522" y="254" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#5C564E">Browser agents share the users session,</text>
-  <text x="522" y="276" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#5C564E">cookies, and visible UI.</text>
+  <text x="522" y="254" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#5C564E">Browser agents share cookies, the DOM,</text>
+  <text x="522" y="276" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#5C564E">and the signed-in UI of the open tab.</text>
   <text x="522" y="318" font-family="Inter, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#3D4F40">Use for dashboards, editors, checkout.</text>
 </svg>
