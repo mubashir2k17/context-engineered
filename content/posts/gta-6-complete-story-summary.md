@@ -2,11 +2,43 @@
 title: "Grand Theft Auto VI (GTA 6): Complete Story Summary"
 date: 2026-11-20T20:00:00Z
 draft: false
-description: "A complete chapter-by-chapter story summary of Grand Theft Auto VI (GTA 6), following Jason Duval and Lucia Caminos across Vice City."
-summary: "A complete chapter-by-chapter story summary of Grand Theft Auto VI (GTA 6), following Jason Duval and Lucia Caminos across Vice City."
-tags: ["gta-6", "grand-theft-auto", "gaming", "story-summary", "rockstar-games"]
-categories: ["Gaming"]
-authors: ["mubashir-ali"]
+description: "A complete chapter-by-chapter story summary and plot breakdown of Grand Theft Auto VI (GTA 6). Follow Jason Duval and Lucia Caminos across Vice City from prison release and bank heists to the final stand ending."
+summary: "A complete chapter-by-chapter story summary and plot breakdown of Grand Theft Auto VI (GTA 6). Follow Jason Duval and Lucia Caminos across Vice City from prison release and bank heists to the final stand ending."
+keywords:
+  - "GTA 6"
+  - "GTA 6 story"
+  - "GTA 6 plot summary"
+  - "Grand Theft Auto VI"
+  - "GTA VI complete story"
+  - "GTA 6 ending explained"
+  - "GTA 6 campaign"
+  - "GTA 6 chapters"
+  - "Jason Duval"
+  - "Lucia Caminos"
+  - "Vice City"
+  - "Rockstar Games"
+  - "Niko Bellic GTA 6"
+  - "Vice City National Bank heist"
+  - "GTA 6 storyline"
+tags:
+  - "gta-6"
+  - "gta-vi"
+  - "grand-theft-auto-6"
+  - "grand-theft-auto-vi"
+  - "rockstar-games"
+  - "vice-city"
+  - "story-summary"
+  - "plot-summary"
+  - "ending-explained"
+  - "jason-duval"
+  - "lucia-caminos"
+  - "gaming"
+categories:
+  - "Gaming"
+authors:
+  - "mubashir-ali"
+images:
+  - "/images/gta6/chapter-1.jpg"
 showTableOfContents: true
 showHero: false
 ---
