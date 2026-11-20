@@ -38,9 +38,11 @@ categories:
 authors:
   - "mubashir-ali"
 images:
-  - "/images/gta6/chapter-1.jpg"
+  - "/images/gta6/cover.jpg"
 showTableOfContents: true
-showHero: false
+showHero: true
+heroStyle: "big"
+featureimagecaption: "Vice City coastal vista and Key Leen lighthouse in Grand Theft Auto VI."
 ---
 
 # Grand Theft Auto VI (GTA 6): Complete Story Summary
